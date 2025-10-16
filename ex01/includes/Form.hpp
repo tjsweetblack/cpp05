@@ -2,6 +2,8 @@
 #include <iostream>
 #include <exception>
 #include <cstdlib>
+#include "Bureaucrat.hpp"
+
 
 
 class Form{
@@ -20,23 +22,24 @@ class Form{
 	Form &operator =(const Form &src);
     //geters
     std::string getName() const;
-    int getGrade() const;
-    //seters
-    void setGrade(int _grade);
+	bool getIs_signed() const;
+    int get_to_sing() const;
+    int get_to_execute() const;
+
     //member functios
-    void incrementGrade();
-    void decrementGrade();
+	void beSigned(const Bureaucrat &Bureaucrat);
+	
     //exceptions
 	class GradeTooHighException : public std::exception
 	{
 		public:
-		virtual const char *what() throw();
+		virtual const char *what() const throw();
 	};
 
     class GradeTooLowException : public std::exception
 	{
 		public:
-		virtual const char *what() throw();
+		virtual const char *what() const throw();
 	};
 
     ~Form();

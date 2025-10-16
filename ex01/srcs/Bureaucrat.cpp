@@ -107,3 +107,4 @@ const char * Bureaucrat::GradeTooLowException::what() throw()
 {
     return "grade too low";
 }
+

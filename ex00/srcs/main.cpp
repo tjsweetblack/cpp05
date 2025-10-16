@@ -1,13 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: badriano <badriano@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 11:35:17 by badriano          #+#    #+#             */
+/*   Updated: 2025/10/16 13:49:20 by badriano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 int main(void)
 {
-    Bureaucrat man = Bureaucrat("man", 300);
-    Bureaucrat man2 = Bureaucrat("man2", 140);
-    Bureaucrat man4 = Bureaucrat("man4", 1);
-    Bureaucrat man6 = Bureaucrat("man6", 20);
-    Bureaucrat man5 = Bureaucrat("man5", 2);
-    Bureaucrat man3 = Bureaucrat("man3", 150);
-    std::cout << man;
+    try
+    {
+        Bureaucrat man = Bureaucrat("man2", 300);
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << e.what() << " in main" << std::endl;
+    }
     return 0;
 }
