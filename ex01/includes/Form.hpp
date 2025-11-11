@@ -2,9 +2,8 @@
 #include <iostream>
 #include <exception>
 #include <cstdlib>
-#include "Bureaucrat.hpp"
 
-
+class Bureaucrat;
 
 class Form{
 
@@ -17,17 +16,17 @@ class Form{
 	public:
 	//constructors
 	Form();
-	Form(const std::string _name, int _grade_to_sign, int _grade_to_execute, bool _is_signed);
+	Form(const std::string _name, int _grade_to_sign, int _grade_to_execute);
 	Form(const Form &src);
 	Form &operator =(const Form &src);
-    //geters
+    //getters
     std::string getName() const;
-	bool getIs_signed() const;
-    int get_to_sing() const;
-    int get_to_execute() const;
+	bool getIsSigned() const;
+    int getGradeToSign() const;
+    int getGradeToExecute() const;
 
-    //member functios
-	void beSigned(const Bureaucrat &Bureaucrat);
+    //member functions
+	void beSigned(const Bureaucrat &bureaucrat);
 	
     //exceptions
 	class GradeTooHighException : public std::exception
