@@ -42,7 +42,7 @@ void Bureaucrat::setGrade(int _grade)
 
 std::ostream& operator <<(std::ostream &out,const Bureaucrat &src)
 {
-    return (out << src.name << ", " << "bureaucrat grade " << src.grade << std::endl);
+    return (out << src.getName() << ", " << "bureaucrat grade " << src.getGrade() << std::endl);
 }
 
 Bureaucrat::~Bureaucrat()

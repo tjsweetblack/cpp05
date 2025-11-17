@@ -395,6 +395,9 @@ john.signForm(permit);
    ```
    
    **Inside `Bureaucrat::signForm`:**
+   ```python
+   print("hello world")
+   ```
    ```cpp
    try {
        form.beSigned(*this);  // Calls Form::beSigned with john as parameter

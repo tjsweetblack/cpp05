@@ -6,9 +6,12 @@
 class Form;
 
 class Bureaucrat{
-	public:
+	
+	private:
 	const std::string name;
 	int grade;
+	
+	public:
 	//constructors
 	Bureaucrat();
 	Bureaucrat(const std::string _name, int _grade);
